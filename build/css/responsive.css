@@ -1,0 +1,77 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  ---label: String value;
+  --line-height-body-sm: 13;
+  --line-height-body-md: 16;
+  --line-height-body-xs: 11;
+  --line-height-body-micro: 10;
+  --line-height-body-extra-micro: 10;
+  --line-height-body-lg: 18;
+  --line-height-heading-h1: 48;
+  --line-height-heading-h2: 40;
+  --line-height-heading-h3: 28;
+  --line-height-heading-h4: 24;
+  --line-height-heading-h5: 20;
+  --line-height-heading-h6: 18;
+  --line-height-heading-h7: 16;
+  --line-height-action-sm: 12;
+  --line-height-action-md: 14;
+  --line-height-label-small: 14;
+  --line-height-label-extra-small: 12;
+  --line-height-label-micro: 11;
+  --line-height-label-extra-micro: 10;
+  --font-size-body-sm: 13;
+  --font-size-body-md: 16;
+  --font-size-body-xs: 11;
+  --font-size-body-micro: 10;
+  --font-size-body-lg: 18;
+  --font-size-body-extra-micro: 10;
+  --font-size-heading-h2: 40;
+  --font-size-heading-h3: 28;
+  --font-size-heading-h4: 24;
+  --font-size-heading-h5: 20;
+  --font-size-heading-h6: 18;
+  --font-size-heading-h7: 16;
+  --font-size-heading-h1: 48;
+  --font-size-action-sm: 12;
+  --font-size-action-md: 14;
+  --spacing-grid-max-width: 375;
+  --spacing-grid-screen-margin: 20;
+  --spacing-grid-columns-all: 335;
+  --spacing-grid-columns-2: 163.5;
+  --spacing-grid-columns-3: 253.25;
+  --spacing-grid-column-1: 73.75;
+  --spacing-grid-columns-4: 343;
+  --spacing-grid-columns-5: 343;
+  --spacing-grid-columns-6: 343;
+  --spacing-grid-columns-7: 343;
+  --spacing-grid-columns-8: 343;
+  --spacing-grid-columns-9: 343;
+  --spacing-grid-columns-10: 343;
+  --spacing-grid-columns-11: 343;
+  --spacing-grid-vertical-margin-large: 48;
+  --spacing-grid-vertical-margin-small: 32;
+  --spacing-3xs: var(--scale-50);
+  --spacing-sm: var(--scale-300);
+  --spacing-md: var(--scale-300);
+  --spacing-lg: var(--scale-400);
+  --spacing-xs: var(--scale-200);
+  --spacing-2xs: var(--scale-100);
+  --spacing-xl: var(--scale-500);
+  --spacing-2xl: var(--scale-600);
+  --spacing-4xl: var(--scale-1000);
+  --spacing-3xl: var(--scale-800);
+  --spacing-5xl: var(--scale-1200);
+  --spacing-6xl: var(--scale-2000);
+  --spacing-7xl: var(--scale-2000);
+  --icon-xs: var(--scale-300);
+  --icon-sm: var(--scale-300);
+  --icon-md: var(--scale-400);
+  --icon-lg: var(--scale-500);
+  --icon-xl: var(--scale-600);
+  --icon-2xl: var(--scale-800);
+  --icon-3xl: var(--scale-1000);
+}

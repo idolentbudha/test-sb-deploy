@@ -1,72 +1,66 @@
 @import "tailwindcss";
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+/* Token imports: primitives → responsive → brand files (primitives → alias → mapped) */
+@import "../build/css/primitives.css";
+@import "../build/css/responsive.css";
+@import "../build/css/brand-a.primitives.css";
+@import "../build/css/brand-a.alias.css";
+@import "../build/css/brand-a.mapped.css";
+@import "../build/css/brand-b.primitives.css";
+@import "../build/css/brand-b.alias.css";
+@import "../build/css/brand-b.mapped.css";
 
-  color: #222;
-  background-color: #ffffff;
+/* Map design tokens to Tailwind's theme system */
+@theme {
+  /* Surface/Background Colors - mapped to Tailwind bg-* utilities */
+  --color-page: var(--surface-colour-page);
+  --color-primary: var(--surface-colour-brand-primary);
+  --color-secondary: var(--surface-colour-secondary);
+  --color-accent: var(--surface-colour-accent);
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-}
+  /* Action/Interactive Colors */
+  --color-action-primary: var(--surface-colour-action-primary);
+  --color-action-primary-hover: var(--surface-colour-action-hover-primary);
+  --color-action-secondary: var(--surface-colour-action-secondary);
+  --color-action-secondary-hover: var(--surface-colour-action-hover-secondary);
+  --color-action-inverse: var(--surface-colour-action-inverse);
+  --color-action-selected: var(--surface-colour-action-selected);
 
-body {
-  margin: 0;
-}
+  /* State Colors */
+  --color-error: var(--surface-colour-error);
+  --color-warning: var(--surface-colour-warning);
+  --color-success: var(--surface-colour-positive-light);
+  --color-info: var(--surface-colour-highlight);
 
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+  /* Text Colors */
+  --color-text-heading: var(--text-colour-headings);
+  --color-text-body: var(--text-colour-body);
+  --color-text-error: var(--text-colour-error);
+  --color-text-success: var(--text-colour-success);
+  --color-text-inverse: var(--text-colour-inverse);
+  --color-text-brand: var(--text-colour-brand);
 
-header {
-  display: flex;
-  justify-content: flex-end;
-  background-color: #673ab8;
-}
+  /* Border Widths */
+  --border-width-sm: var(--border-width-sm);
+  --border-width-md: var(--border-width-md);
+  --border-width-lg: var(--border-width-lg);
 
-header nav {
-  display: flex;
-}
+  /* Border Radius */
+  --radius-xs: var(--border-radius-xs);
+  --radius-sm: var(--border-radius-sm);
+  --radius-md: var(--border-radius-md);
+  --radius-lg: var(--border-radius-lg);
+  --radius-xl: var(--border-radius-xl);
+  --radius-2xl: var(--border-radius-xxl);
+  --radius-full: var(--border-radius-round);
 
-header a {
-  color: #fff;
-  padding: 0.75rem;
-  text-decoration: none;
-}
+  /* Border Colors */
+  --color-border-primary: var(--border-colour-primary);
+  --color-border-secondary: var(--border-colour-secondary);
+  --color-border-error: var(--border-colour-error);
+  --color-border-selected: var(--border-colour-selected);
 
-header a.active {
-  background-color: #0005;
-}
-
-header a:hover {
-  background-color: #0008;
-}
-
-main {
-  flex: auto;
-  display: flex;
-  align-items: center;
-  max-width: 1280px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-@media (max-width: 639px) {
-  main {
-    margin: 2rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #ccc;
-    background-color: #1a1a1a;
-  }
+  /* Font Families */
+  --font-family-heading: var(--font-font-family-headings);
+  --font-family-body: var(--font-font-family-paragraph);
 }
