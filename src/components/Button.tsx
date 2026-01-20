@@ -1,11 +1,16 @@
-import { ComponentProps } from "preact";
+import MuiButton from "@mui/material/Button";
 
 export type ButtonVariant = "primary" | "secondary" | "tertiary";
 export type ButtonSize = "sm" | "md";
-export interface ButtonProps extends Omit<ComponentProps<"button">, "size"> {
+export interface ButtonProps {
   variant?: ButtonVariant;
   size?: ButtonSize;
   label: string;
+  disabled?: boolean;
+  className?: string;
+  startIcon?: React.ReactNode;
+  endIcon?: React.ReactNode;
+  onClick?: () => void;
 }
 
 export default function Button({
@@ -14,7 +19,9 @@ export default function Button({
   disabled = false,
   className = "",
   label = "Button label",
-  ...props
+  startIcon,
+  endIcon,
+  onClick,
 }: ButtonProps) {
   // Base styles
   const baseStyles =
@@ -35,17 +42,21 @@ export default function Button({
 
   // Size styles
   const sizeStyles = {
-    sm: "px-12 py-12 text-sm",
-    md: "px-16 py-16 text-base",
+    sm: "px-12 py-8 text-sm",
+    md: "px-16 py-12 text-base",
   };
 
   return (
-    <button
+    <MuiButton
       disabled={disabled}
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
-      {...props}
+      onClick={onClick}
+      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className} normal-case`}
+      disableRipple
+      startIcon={startIcon}
+      endIcon={endIcon}
+      variant="contained"
     >
       {label}
-    </button>
+    </MuiButton>
   );
 }

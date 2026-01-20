@@ -3,6 +3,8 @@ import { useEffect, useState } from "preact/hooks";
 import "./style.css";
 import Button from "../../components/Button";
 import InputField from "../../components/InputField";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
 export function Home() {
   const [currentTheme, setCurrentTheme] = useState("brand-a");
@@ -39,6 +41,8 @@ export function Home() {
           </h3>
           <div class="flex gap-4 flex-wrap">
             <Button
+              startIcon={<ChevronLeftIcon />}
+              endIcon={<ChevronRightIcon />}
               size="md"
               onClick={() => alert("Primary Button Clicked!")}
               label="Medium Button"
@@ -47,6 +51,8 @@ export function Home() {
               size="sm"
               onClick={() => alert("Small Button Clicked!")}
               label="Small Button"
+              startIcon={<ChevronLeftIcon />}
+              endIcon={<ChevronRightIcon />}
             />
           </div>
         </div>
