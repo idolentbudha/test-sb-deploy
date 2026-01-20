@@ -36,6 +36,25 @@ StyleDictionary.registerTransform({
   },
 });
 
+// 1b. VALUE TRANSFORM: Add px unit to numeric values
+StyleDictionary.registerTransform({
+  name: "size/pxUnit",
+  type: "value",
+  transitive: true,
+  filter: (token) => {
+    // Only apply to numeric values (Scale, spacing, sizes, etc.) - not colors or strings
+    return (
+      typeof token.value === "number" &&
+      token.type !== "color" &&
+      !token.path.includes("Font") &&
+      !token.path.includes("weight")
+    );
+  },
+  transform: (token) => {
+    return token.value === 0 ? "0" : `${token.value}px`;
+  },
+});
+
 // 2. PARSER: Lift tokens to the root so references can find them
 StyleDictionary.registerParser({
   name: "token-unwrapper",
@@ -154,7 +173,12 @@ function createConfigForBrand(brand) {
     ],
     platforms: {
       css: {
-        transforms: ["attribute/cti", "name/clean-ids", "color/css", "size/px"],
+        transforms: [
+          "attribute/cti",
+          "name/clean-ids",
+          "color/css",
+          "size/pxUnit",
+        ],
         buildPath: "build/css/",
         files: [
           // 1. Brand Primitives (Colour.Brand.BrandX, Font.Brand.BrandX)
@@ -233,7 +257,12 @@ function createPrimitivesConfig() {
     ],
     platforms: {
       css: {
-        transforms: ["attribute/cti", "name/clean-ids", "color/css", "size/px"],
+        transforms: [
+          "attribute/cti",
+          "name/clean-ids",
+          "color/css",
+          "size/pxUnit",
+        ],
         buildPath: "build/css/",
         files: [
           {
@@ -264,7 +293,12 @@ function createResponsiveConfig() {
     ],
     platforms: {
       css: {
-        transforms: ["attribute/cti", "name/clean-ids", "color/css", "size/px"],
+        transforms: [
+          "attribute/cti",
+          "name/clean-ids",
+          "color/css",
+          "size/pxUnit",
+        ],
         buildPath: "build/css/",
         files: [
           {

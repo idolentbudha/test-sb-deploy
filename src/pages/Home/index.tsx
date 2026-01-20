@@ -2,6 +2,7 @@ import { useEffect, useState } from "preact/hooks";
 import preactLogo from "../../assets/preact.svg";
 
 import "./style.css";
+import Button from "../../components/Button";
 
 export function Home() {
   const [currentTheme, setCurrentTheme] = useState("brand-a");
@@ -31,7 +32,17 @@ export function Home() {
             Switch Brand
           </button>
         </div>
-
+        <h1>component</h1>
+        <h2>Button</h2>
+        <Button size="md" onClick={() => alert("Primary Button Clicked!")}>
+          Click Me
+        </Button>
+        <br />
+        <Button size="sm" onClick={() => alert("Primary Button Clicked!")}>
+          Click Me
+        </Button>
+        <br />
+        <button class={"bg-action-primary px-12 rounded-full "}>hello</button>
         {/* Color Samples */}
         <div class="bg-secondary rounded-lg p-6 border border-border-primary">
           <h3 class="text-xl font-heading text-text-heading mb-4">

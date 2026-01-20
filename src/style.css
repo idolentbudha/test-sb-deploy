@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Font definitions - must load before using font families */
+@import "./fonts.css";
+
 /* Token imports: primitives → responsive → brand files (primitives → alias → mapped) */
 @import "../build/css/primitives.css";
 @import "../build/css/responsive.css";
@@ -11,3 +14,13 @@
 @import "../build/css/brand-b.mapped.css";
 
 @config '../tailwind.config.js';
+
+/* set fonts */
+body {
+  font-family: var(--font-font-family-paragraph), system-ui, sans-serif;
+  font-size: var(--font-size-body-md);
+  font-weight: 400;
+  line-height: var(--line-height-body-md);
+  color: var(--text-colour-body);
+  background-color: var(--surface-colour-page);
+}

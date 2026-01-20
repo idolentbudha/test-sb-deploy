@@ -1,0 +1,72 @@
+/* Brand A - Inter */
+@font-face {
+  font-family: "Inter";
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/inter-light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/inter-semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-bold.woff2") format("woff2");
+}
+
+/* Brand B - Open Sans */
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/opensans-light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/opensans-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/opensans-semibold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/opensans-bold.woff2") format("woff2");
+}
+
+/* Brand B - Mencken Std Head Narrow */
+@font-face {
+  font-family: "mencken-std-head-narrow";
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/mencken-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "mencken-std-head-narrow";
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/mencken-bold.woff2") format("woff2");
+}
